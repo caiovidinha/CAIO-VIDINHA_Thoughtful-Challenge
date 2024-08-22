@@ -13,7 +13,7 @@ class ImageDownloader:
     def download_image(self, image_url):
         """Downloads an image from a given URL using the browser and saves it in the specified directory."""
         fs = FileSystem()
-        save_directory = "output/images"
+        save_directory = "output"
         fs.create_directory(save_directory)
 
         image_filename = f"{uuid.uuid4()}.jpg"
