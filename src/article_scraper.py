@@ -30,7 +30,12 @@ class ArticleScraper:
         self.browser.input_text("xpath://input[@placeholder='Search']", self.search_text)
         self.browser.press_key("xpath://input[@placeholder='Search']", Keys.ENTER)
         self.browser.click_element_when_visible("id:search-sort-option")
-        self.browser.click_element_when_visible(f"xpath://option[@value='{self.category.lower()}']")
+        try:
+
+            self.browser.click_element_when_visible(f"xpath://option[@value='{self.category.lower()}']")
+        except Exception as e:
+            logging.warning(f"Could not find category '{self.category.lower()}'. Defaulting to 'relevance'. Error: {e}")
+            self.browser.click_element_when_visible("xpath://option[@value='relevance']")
 
     def process_articles(self):
         """Processes the articles found during the search."""
