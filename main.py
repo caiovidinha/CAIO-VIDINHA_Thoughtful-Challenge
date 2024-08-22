@@ -3,9 +3,11 @@ This module initializes and runs the article scraping process using Robocorp Wor
 """
 
 import logging
+from robocorp.tasks import task
 from RPA.Robocorp.WorkItems import WorkItems
 from src.article_scraper import ArticleScraper
 
+@task
 def main():
     """Main function to execute the scraping process using Robocorp Work Items."""
     logging.basicConfig(
