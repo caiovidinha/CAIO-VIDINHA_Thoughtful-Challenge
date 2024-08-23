@@ -198,7 +198,7 @@ To develop the contains_money function, I focused on identifying and handling va
 
 #### Approach:
 
-1. ** Regular Expression Design: **
+1. **Regular Expression Design:**
 
 -   I began by designing a regular expression that could match common monetary patterns. This included formats such as:
     -   Standard dollar amounts like $11.1, $111,111.11.
