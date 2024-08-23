@@ -423,7 +423,7 @@ work_items = WorkItems()
         logging.warning(f"Error retrieving 'number_of_months': {e}. Defaulting to '0'.")
         number_of_months = 0
 ```
-### Adding Loggig
+### Adding Logging
 To make the script more robust and easier to debug, I added logging throughout the code. 
 This provided visibility into the script’s execution flow and helped in identifying issues during development and testing.
 I imported and configures logging to log into a file and input, and replaced all the "prints" I had with "logging", also, I went through the whole proccess trying to add logs to follow the best practices.
